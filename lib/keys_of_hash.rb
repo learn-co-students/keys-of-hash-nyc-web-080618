@@ -1,3 +1,5 @@
+=begin
+
 require 'pry'
 
 class Hash
@@ -21,17 +23,17 @@ class Hash
             b: 2,
             c: 3}
 
-=begin
+
 
 
 
       I had some difficulty originally understanding how to incorporate the hashes into the method I was utilizing in this lab. After speaking with Dalia, she recommended
       that I hardcode the different hashes into the code. Since the tests call on different hashes, I went through each test individually to ensure that the appropriate hash was
-      being utilized. Each test passed with the appropriate hash. 
+      being utilized. Each test passed with the appropriate hash.
 
 
 
-=end
+
 
         }
       final_array = []
@@ -50,3 +52,13 @@ class Hash
       return final_array
     end
   end
+
+
+=end
+
+
+  class Hash
+  def keys_of(*args)
+    map {|key, value| args.include?(value) ? key : nil }.compact
+  end
+end
